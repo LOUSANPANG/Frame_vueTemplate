@@ -1,0 +1,37 @@
+
+/* scrollbar
+   ========================================================================== */
+
+/* scrollbar */
+::-webkit-scrollbar-track-piece {
+  background-color: #0766aa;
+  border-radius: 3px;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 8px;
+}
+
+/* horizontal scrollbar style */
+::-webkit-scrollbar-thumb:horizontal {
+  width: 2px;
+  background-color: #d9d9d9;
+  border-radius: 4px;
+}
+
+/* vertical scrollbar style */
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #d9d9d9;
+    border-radius: 4px;
+    outline: 2px solid #0766aa;
+    outline-offset: -2px;
+    border: 2px solid #0766aa;
+}
+
+/* scrollbar hover */
+::-webkit-scrollbar-thumb:hover {
+    height: 50px;
+    background-color: #d9d9d9;
+    border-radius: 4px;
+}
