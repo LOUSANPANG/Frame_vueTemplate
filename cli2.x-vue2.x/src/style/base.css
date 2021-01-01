@@ -1,0 +1,39 @@
+@import "./normalize.css";
+
+
+/* scrollbar
+   ========================================================================== */
+
+/* scrollbar */
+::-webkit-scrollbar-track-piece {
+  background-color: #f6f7fb;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+
+/* horizontal scrollbar style */
+::-webkit-scrollbar-thumb:horizontal {
+  width: 2px;
+  background-color: #CCCCCC;
+  border-radius: 6px;
+}
+
+/* vertical scrollbar style */
+::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: #CCCCCC;
+  border-radius: 4px;
+  outline: 2px solid #f6f7fb;
+  outline-offset: -2px;
+  border: 2px solid #f6f7fb;
+}
+
+/* scrollbar hover */
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  height: 50px;
+  background-color: #9f9f9f;
+  border-radius: 4px;
+}
