@@ -16,41 +16,12 @@
 ```bash
 yarn add -D prettier eslint-plugin-prettier @vue/eslint-config-prettier
 ```
-### 配置
-```json
-{
-  rules: {
-    // prettier
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto',
-        arrowParens: 'avoid',
-        bracketSpacing: true,
-        htmlWhitespaceSensitivity: 'css',
-        insertPragma: false,
-        jsxBracketSameLine: false,
-        jsxSingleQuote: false,
-        printWidth: 80,
-        proseWrap: 'preserve',
-        quoteProps: 'as-needed',
-        requirePragma: false,
-        semi: false,
-        singleQuote: true,
-        tabWidth: 2,
-        trailingComma: 'none',
-        useTabs: false
-      }
-    ]
-  }
-}
-```
 
 
 ## 部署`Angular` 团队Git的规范，用 `git cz` 代替 `git commit`，添加commitlint。
 ### 依赖
 ```bash
-yarn add -g commitizen cz-conventional-changelog
+yarn global add commitizen cz-conventional-changelog
 echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 yarn add -D commitizen cz-conventional-changelog
 yarn add -D husky @commitlint/cli @commitlint/config-conventional
@@ -75,7 +46,6 @@ yarn add -D standard-version
   }
 }
 ```
-
 
 ### .commitlintrc
 ```js

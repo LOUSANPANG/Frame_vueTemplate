@@ -10,14 +10,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "commit": "git-cz",
-    "release": "standard-version"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "cz-conventional-changelog": "^3.3.0",
     "element-ui": "^2.15.1",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.11",
@@ -25,8 +22,6 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
@@ -34,27 +29,14 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-component": "^1.1.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
-    "commitizen": "^4.2.4",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^6.2.2",
-    "husky": "^6.0.0",
     "node-sass": "^6.0.0",
     "prettier": "^2.3.1",
     "sass-loader": "^10",
     "script-ext-html-webpack-plugin": "^2.1.5",
-    "standard-version": "^9.3.0",
     "vue-template-compiler": "^2.6.11"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "browserslist": [
     "> 1%",
