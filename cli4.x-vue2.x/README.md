@@ -9,7 +9,11 @@
 
 ## 构建、集成类
 * git cz
-* eslint prettier
+* eslint
+### prettier
+```
+yarn add -D prettier eslint-plugin-prettier @vue/eslint-config-prettier
+```
 * babel
 
 

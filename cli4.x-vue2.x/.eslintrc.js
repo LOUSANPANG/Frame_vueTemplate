@@ -2,7 +2,9 @@ module.exports = {
   root: true,
 
   globals: {
-    process: true
+    process: true,
+    $CONFIG: true,
+    $API: true
   },
 
   parserOptions: {
@@ -20,37 +22,32 @@ module.exports = {
     es6: true
   },
 
-  extends: ['plugin:vue/recommended', 'eslint:recommended'],
-  // plugins: ['babel', 'prettier'],
+  extends: [ 'plugin:vue/recommended', 'eslint:recommended' ],
+  plugins: [ 'prettier' ],
 
   rules: {
-    // 全局变量
-    globals: {
-      $CONFIG: 'off',
-      $API: 'off'
-    },
-
     // prettier
-    // 'prettier/prettier': [
-    //   'error',
-    //   {
-    //     arrowParens: 'avoid',
-    //     bracketSpacing: true,
-    //     htmlWhitespaceSensitivity: 'css',
-    //     insertPragma: false,
-    //     jsxBracketSameLine: false,
-    //     jsxSingleQuote: false,
-    //     printWidth: 80,
-    //     proseWrap: 'preserve',
-    //     quoteProps: 'as-needed',
-    //     requirePragma: false,
-    //     semi: false,
-    //     singleQuote: true,
-    //     tabWidth: 2,
-    //     trailingComma: 'none',
-    //     useTabs: false
-    //   }
-    // ],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+        arrowParens: 'avoid',
+        bracketSpacing: true,
+        htmlWhitespaceSensitivity: 'css',
+        insertPragma: false,
+        jsxBracketSameLine: false,
+        jsxSingleQuote: false,
+        printWidth: 80,
+        proseWrap: 'preserve',
+        quoteProps: 'as-needed',
+        requirePragma: false,
+        semi: false,
+        singleQuote: true,
+        tabWidth: 2,
+        trailingComma: 'none',
+        useTabs: false
+      }
+    ],
 
     // 是否能使用debugger,开发可以，线上不可以
     'no-debugger': process.env.NODE_ENV === 'development' ? 'off' : 'error',
@@ -112,17 +109,5 @@ module.exports = {
         }
       }
     ]
-  },
-
-
-  // 单元测试相关
-  overrides: [{
-    files: [
-      '**/__tests__/*.{j,t}s?(x)',
-      '**/tests/unit/**/*.spec.{j,t}s?(x)'
-    ],
-    env: {
-      jest: true
-    }
-  }]
+  }
 }

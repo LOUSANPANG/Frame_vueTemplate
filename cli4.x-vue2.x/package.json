@@ -2,6 +2,11 @@
   "name": "cli4.x-vue2.x",
   "version": "0.1.0",
   "private": true,
+  "description": "cli4.x-vue2.x",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LOUSANPANG/vue-template/tree/master/cli4.x-vue2.x"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -20,12 +25,15 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-component": "^1.1.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^6.0.0",
+    "prettier": "^2.3.1",
     "sass-loader": "^10",
     "script-ext-html-webpack-plugin": "^2.1.5",
     "vue-template-compiler": "^2.6.11"
