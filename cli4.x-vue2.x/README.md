@@ -1,34 +1,104 @@
 # cli4.x-vue2.x
 
-* 基于`vue-cli 4.x`的`Vue2.x`项目模板
+* 基于 `vue-cli 4.x`的`Vue2.x`项目模板
 
-* 集成`vue(vuex、vue-router、axios)`
+* 集成 `vue(vuex、vue-router、axios)`
 
-* 集成`element ui`
+* 基于 ESlint + Prettier 代码书写规范
+
+* 遵从 `Angular Style Commit Message Conventions` 代码提交规范
+
+* 集成 `element ui` + `scss`
 
 
-## 构建、集成类
-* git cz
-* eslint
-### prettier
-```
+## prettier
+### 依赖
+```bash
 yarn add -D prettier eslint-plugin-prettier @vue/eslint-config-prettier
 ```
-* babel
+### 配置
+```json
+{
+  rules: {
+    // prettier
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+        arrowParens: 'avoid',
+        bracketSpacing: true,
+        htmlWhitespaceSensitivity: 'css',
+        insertPragma: false,
+        jsxBracketSameLine: false,
+        jsxSingleQuote: false,
+        printWidth: 80,
+        proseWrap: 'preserve',
+        quoteProps: 'as-needed',
+        requirePragma: false,
+        semi: false,
+        singleQuote: true,
+        tabWidth: 2,
+        trailingComma: 'none',
+        useTabs: false
+      }
+    ]
+  }
+}
+```
 
 
-## 依赖
-### vue-router
+## 部署`Angular` 团队Git的规范，用 `git cz` 代替 `git commit`，添加commitlint。
+### 依赖
+```bash
+yarn add -g commitizen cz-conventional-changelog
+echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+yarn add -D commitizen cz-conventional-changelog
+yarn add -D husky @commitlint/cli @commitlint/config-conventional
 
-### vuex
+yarn add -D standard-version
+```
 
-### axios
+### package.json
+```json
+"script": {
+    "commit": "git-cz",
+    "release": "standard-version"
+},
+"config": {
+  "commitizen": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
+},
+"husky": {
+  "hooks": {
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  }
+}
+```
 
-### element
+### .commitlintrc
+```js
+module.exports = {
+    extends: ['@commitlint/config-conventional']
+}
+```
 
-### scss
+
+## babel
+### remove console plugin
+```js
+module.exports = {
+  "plugins": [
+    [
+      'transform-remove-console',
+      {
+        exclude: ['error', 'warn']
+      }
+    ]
+  ]
+}
+```
 
 
-## 配置
-* vue.config.js
+## vue.config.js
  
