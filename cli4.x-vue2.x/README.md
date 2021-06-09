@@ -76,6 +76,7 @@ yarn add -D standard-version
 }
 ```
 
+
 ### .commitlintrc
 ```js
 module.exports = {
