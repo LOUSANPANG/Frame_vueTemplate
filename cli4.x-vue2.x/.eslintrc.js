@@ -22,33 +22,13 @@ module.exports = {
     es6: true
   },
 
-  extends: [ 'plugin:vue/recommended', 'eslint:recommended' ],
+  extends: [
+    'plugin:vue/essential',
+    'plugin:prettier/recommended'
+  ],
   plugins: [ 'prettier' ],
 
   rules: {
-    // prettier
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto',
-        arrowParens: 'avoid',
-        bracketSpacing: true,
-        htmlWhitespaceSensitivity: 'css',
-        insertPragma: false,
-        jsxBracketSameLine: false,
-        jsxSingleQuote: false,
-        printWidth: 80,
-        proseWrap: 'preserve',
-        quoteProps: 'as-needed',
-        requirePragma: false,
-        semi: false,
-        singleQuote: true,
-        tabWidth: 2,
-        trailingComma: 'none',
-        useTabs: false
-      }
-    ],
-
     // 是否能使用debugger,开发可以，线上不可以
     'no-debugger': process.env.NODE_ENV === 'development' ? 'off' : 'error',
     // switch必须提供 default
@@ -73,6 +53,8 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     // 数组前后不需要添加空格
     'array-bracket-spacing': ['error', 'never'],
+    // 允许多个空行
+    'no-multiple-empty-lines': ["error", { "max": 2, "maxEOF": 1 }],
     // 箭头函数前后必须要有空格
     'arrow-spacing': [
       'error',

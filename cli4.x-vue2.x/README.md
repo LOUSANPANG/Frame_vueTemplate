@@ -14,7 +14,7 @@
 ## prettier
 ### 依赖
 ```bash
-yarn add -D prettier eslint-plugin-prettier @vue/eslint-config-prettier
+yarn add -D prettier eslint-plugin-prettier eslint-config-prettier @vue/eslint-config-prettier
 ```
 
 
