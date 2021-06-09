@@ -4,7 +4,6 @@
 import qs from 'qs'
 import axios from '../base-axiosconfig'
 
-
 // test get 1
 const getTest = data => {
   const url = `${$CONFIG.test}/inquire?offset=${data.offset}&limit=${data.limit}`
