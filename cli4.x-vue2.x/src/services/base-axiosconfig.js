@@ -35,7 +35,7 @@ const clearStorage = () => {
  * Message
  * @param {number} code 状态码
  */
-const errorHandle = (code) => {
+const errorHandle = code => {
   switch (code) {
     case 401:
       Message.warning(statusCode(code))
@@ -61,19 +61,19 @@ let instance = axios.create()
 instance.defaults.withCredentials = false
 instance.defaults.timeout = 30000
 instance.interceptors.request.use(
-  (config) => {
+  config => {
     const token = localStorage.getItem('token')
     token ? (config.headers['token'] = token) : (config.headers['token'] = null)
     config.headers['withCredentials'] = true
     return config
   },
-  (error) => {
+  error => {
     return Promise.reject(error)
   }
 )
 
 instance.interceptors.response.use(
-  (response) => {
+  response => {
     if (response.status === 200) {
       // 防止服务没有code的情况
       if (response.data.code === undefined) {
@@ -90,7 +90,7 @@ instance.interceptors.response.use(
       }
     }
   },
-  (error) => {
+  error => {
     if (error && error.response) {
       errorHandle(error.response.status)
       return Promise.reject(error.response)
