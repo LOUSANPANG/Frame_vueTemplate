@@ -24,12 +24,15 @@ module.exports = {
 
   extends: [
     'plugin:vue/essential',
-    'plugin:prettier/recommended'
+    'eslint:recommended',
+    'plugin:prettier/recommended',
+    '@vue/prettier'
   ],
-  plugins: [ 'prettier' ],
+  plugins: [ 'vue', 'prettier' ],
 
   rules: {
-    // 是否能使用debugger,开发可以，线上不可以
+    // 是否能使用debugger console,开发可以，线上不可以
+    'no-console': process.env.NODE_ENV === 'development' ? 'off' : 'error',
     'no-debugger': process.env.NODE_ENV === 'development' ? 'off' : 'error',
     // switch必须提供 default
     'default-case': 'error',
@@ -53,6 +56,8 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     // 数组前后不需要添加空格
     'array-bracket-spacing': ['error', 'never'],
+    // 忽略检测换行风格
+    'linebreak-style': 'off',
     // 允许多个空行
     'no-multiple-empty-lines': ["error", { "max": 2, "maxEOF": 1 }],
     // 箭头函数前后必须要有空格
@@ -63,8 +68,6 @@ module.exports = {
         after: true
       }
     ],
-    // 代码中可出现console
-    'no-console': 'off',
     // 正则中可以出现控制字符
     'no-control-regex': 'off',
     'no-unused-vars': ['error', {
