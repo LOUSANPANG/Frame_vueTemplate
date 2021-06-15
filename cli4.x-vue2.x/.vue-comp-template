@@ -1,0 +1,33 @@
+<template>
+  <div class="c-<%=fileName%>"></div>
+</template>
+
+<script>
+/**
+ * * <%=fileName%>
+ */
+
+export default {
+  name: '<%=fileName%>',
+  components: {},
+  mixins: [],
+  props: {},
+  data() {
+    return {}
+  },
+
+  computed: {},
+  watch: {},
+
+  created() {},
+  mounted() {},
+
+  methods: {}
+}
+</script>
+
+<style lang="scss" scoped>
+.c-<%=fileName%> {
+
+}
+</style>
