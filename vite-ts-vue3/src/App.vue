@@ -1,15 +1,16 @@
 <template>
-  <HelloWorld />
+  <CycleHook />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import CycleHook from './exercise/CycleHook.vue'
+// import Setup from './exercise/setup.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    CycleHook
   }
 })
 </script>
