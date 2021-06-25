@@ -23,9 +23,10 @@ module.exports = {
   },
 
   extends: [
-    'plugin:vue/recommended',
-    '@vue/standard',
-    '@vue/prettier'
+    'standard',
+    'plugin:vue/essential',
+    '@vue/prettier',
+    'plugin:prettier/recommended'
   ],
   plugins: [ 'vue', 'prettier' ],
 
